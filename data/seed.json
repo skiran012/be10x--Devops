@@ -1,0 +1,216 @@
+{
+  "accounts": [
+    {
+      "id": "acc-bank",
+      "name": "HDFC Savings",
+      "type": "bank",
+      "openingBalance": 5000000,
+      "openingDate": "2026-01-01"
+    },
+    {
+      "id": "acc-cash",
+      "name": "Wallet",
+      "type": "cash",
+      "openingBalance": 500000,
+      "openingDate": "2026-01-01"
+    },
+    {
+      "id": "acc-card",
+      "name": "Credit card",
+      "type": "card",
+      "openingBalance": 0,
+      "openingDate": "2026-01-01"
+    },
+    {
+      "id": "acc-loan",
+      "name": "Home loan",
+      "type": "loan",
+      "openingBalance": 10000000,
+      "openingDate": "2026-01-01"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-rent",
+      "name": "Rent"
+    },
+    {
+      "id": "cat-groceries",
+      "name": "Groceries"
+    },
+    {
+      "id": "cat-dining",
+      "name": "Dining"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "t1",
+      "date": "2026-10-01",
+      "type": "income",
+      "amount": 8000000,
+      "accountId": "acc-bank",
+      "version": 1,
+      "note": "Salary"
+    },
+    {
+      "id": "t2",
+      "date": "2026-10-02",
+      "type": "expense",
+      "amount": 2000000,
+      "accountId": "acc-bank",
+      "version": 1,
+      "categoryId": "cat-rent"
+    },
+    {
+      "id": "t3",
+      "date": "2026-10-05",
+      "type": "expense",
+      "amount": 300000,
+      "accountId": "acc-card",
+      "version": 1,
+      "categoryId": "cat-groceries"
+    },
+    {
+      "id": "t4",
+      "date": "2026-10-06",
+      "type": "refund",
+      "amount": 50000,
+      "accountId": "acc-card",
+      "version": 1,
+      "refundOfId": "t3"
+    },
+    {
+      "id": "t5",
+      "date": "2026-10-07",
+      "type": "transfer",
+      "amount": 200000,
+      "accountId": "acc-bank",
+      "version": 1,
+      "toAccountId": "acc-cash"
+    },
+    {
+      "id": "t6",
+      "date": "2026-10-10",
+      "type": "transfer",
+      "amount": 250000,
+      "accountId": "acc-bank",
+      "version": 1,
+      "toAccountId": "acc-card",
+      "note": "Card repayment"
+    },
+    {
+      "id": "t7",
+      "date": "2026-10-15",
+      "type": "debt_payment",
+      "amount": 1000000,
+      "accountId": "acc-bank",
+      "version": 1,
+      "toAccountId": "acc-loan",
+      "principal": 800000,
+      "interest": 200000
+    },
+    {
+      "id": "t8",
+      "date": "2026-10-18",
+      "type": "expense",
+      "amount": 120000,
+      "accountId": "acc-cash",
+      "version": 1,
+      "categoryId": "cat-dining"
+    },
+    {
+      "id": "t9",
+      "date": "2026-10-20",
+      "type": "expense",
+      "amount": 400000,
+      "accountId": "acc-bank",
+      "version": 1,
+      "categoryId": "cat-groceries"
+    },
+    {
+      "id": "t10",
+      "date": "2026-11-05",
+      "type": "expense",
+      "amount": 99900,
+      "accountId": "acc-bank",
+      "version": 1,
+      "categoryId": "cat-dining",
+      "note": "Scheduled draft"
+    },
+    {
+      "id": "t11",
+      "date": "2026-09-30",
+      "type": "expense",
+      "amount": 70000,
+      "accountId": "acc-bank",
+      "version": 1,
+      "categoryId": "cat-groceries"
+    }
+  ],
+  "bills": [
+    {
+      "id": "b-rent",
+      "name": "Rent",
+      "amount": 2000000,
+      "recurrence": "monthly",
+      "anchorDate": "2026-01-02",
+      "skipped": [],
+      "paid": {
+        "2026-10-02": "t2"
+      }
+    },
+    {
+      "id": "b-net",
+      "name": "Internet",
+      "amount": 100000,
+      "recurrence": "monthly",
+      "anchorDate": "2026-01-31",
+      "skipped": [],
+      "paid": {}
+    },
+    {
+      "id": "b-ins",
+      "name": "Insurance",
+      "amount": 1200000,
+      "recurrence": "annual",
+      "anchorDate": "2025-10-20",
+      "skipped": [
+        "2026-10-20"
+      ],
+      "paid": {}
+    }
+  ],
+  "budgets": [
+    {
+      "id": "bud-groc",
+      "month": "2026-10",
+      "categoryId": "cat-groceries",
+      "limit": 800000
+    },
+    {
+      "id": "bud-dine",
+      "month": "2026-10",
+      "categoryId": "cat-dining",
+      "limit": 100000
+    }
+  ],
+  "goals": [
+    {
+      "id": "g-emerg",
+      "name": "Emergency fund",
+      "target": 12000000,
+      "targetDate": "2027-04-30",
+      "allocations": [
+        {
+          "id": "a1",
+          "amount": 3000000,
+          "date": "2026-10-01"
+        }
+      ]
+    }
+  ],
+  "firedAlerts": [],
+  "alerts": [],
+  "revision": 0
+}

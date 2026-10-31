@@ -1,0 +1,17 @@
+body { font-family: system-ui, sans-serif; margin: 0; background: #f6f7f9; color: #1a202c; }
+main { max-width: 960px; margin: 0 auto; padding: 16px; display: grid; gap: 16px; }
+.card { background: #fff; border-radius: 8px; padding: 16px; box-shadow: 0 1px 3px rgb(0 0 0 / 12%); overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e2e8f0; }
+.chart { width: 100%; max-width: 420px; }
+.note { color: #4a5568; font-size: 0.9rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.alerts { background: #fffbeb; border: 1px solid #f6ad55; padding: 8px 16px; border-radius: 8px; }
+form { display: grid; gap: 8px; max-width: 360px; }
+[role='alert'] { color: #9b2c2c; }
+.top { display: flex; gap: 16px; align-items: center; padding: 8px 16px; background: #1a365d; color: #fff; flex-wrap: wrap; }
+.top nav { display: flex; gap: 8px; }
+.top button[aria-current='page'] { font-weight: bold; text-decoration: underline; }
+.stack { display: grid; gap: 16px; }
+.sr { position: absolute; left: -9999px; }
+@media (max-width: 600px) { main { padding: 8px; } }

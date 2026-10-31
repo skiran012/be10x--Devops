@@ -1,0 +1,16 @@
+{
+  "name": "spendsight",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "python -m http.server 5173",
+    "test": "vitest run",
+    "prebuild": "npm test",
+    "build": "node scripts/build-check.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jsdom": "^30.1.3",
+    "vitest": "^5.0.5"
+  }
+}
